@@ -14,18 +14,19 @@ import random
 def main():
     num_times = int(input("How many times do you want to roll the dice? "))
     print(f"Rolling the dice {num_times} times...the values are:")
-    roll_dice(num_times)
+    roll_dice(num_times)    # Call the roll_dice function using the num_times as a 
     roll_again = input("Do you want to roll the dice again? (y/n) ")
-    if roll_again != 'y':
+    if roll_again != 'y':    # Exit function (stop everything) if answer is not "y"
+        print("Thank you for playing!")
         exit
-    else:
+    else:                    # If answer is "y", invoke the main function to roll the dice again.
         main()
             
 def roll_dice(num_times):
-    rolls = 0
-    for i in range(num_times):
-        rolls += 1
-        random_number = random.randint(1, 6)
+    rolls = 0     # Start the counter
+    for i in range(num_times):     # Loop through how many times the user wants you to roll the dice
+        rolls += 1       # Increase the number by 1 with every loop
+        random_number = random.randint(1, 6)    # Create a variable to store a random number for each loop
         print(f'Roll #{rolls}: {random_number}')
     
-main()
+main()        # Call the main function again
