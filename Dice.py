@@ -27,6 +27,5 @@ def roll_dice(num_times):
         rolls += 1
         random_number = random.randint(1, 6)
         print(f'Roll #{rolls}: {random_number}')
-    return rolls
     
 main()
